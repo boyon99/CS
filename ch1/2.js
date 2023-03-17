@@ -6,9 +6,11 @@ class Singleton {
         return Singleton.instance
     }
     getInstance() {
-        return this 
+        return this
     }
 }
-const a = new Singleton()
-const b = new Singleton() 
+const a = new Singleton("a")
+const b = new Singleton("b")
 console.log(a === b) // true 
+console.log(a.getInstance() === b.getInstance()) // true 
+console.log(a.getInstance(), b.getInstance()) // true 
